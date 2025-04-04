@@ -1,0 +1,71 @@
+ALL THIS BELOW WAS EXPLAINED BY AI AND I AM KEEPING IT FOR FUTURE REFERENCES:
+
+Exactly! Let's break it down even further in simpler terms.
+
+### How `hasPlayerWonTheRound` Works
+
+1. **Fetching Values:**
+   - When you call `hasPlayerWonTheRound(userOption, computerResult)`, you pass two values (called arguments) to the function: `userOption` and `computerResult`.
+
+2. **Checking Conditions:**
+   - The function `hasPlayerWonTheRound` uses these values to check if the player's choice beats the computer's choice.
+
+### Detailed Example
+
+1. **Player Makes a Choice:**
+   - Suppose the player chooses "Rock". This value is stored in `userOption`.
+
+2. **Computer Makes a Choice:**
+   - The computer randomly picks "Scissors". This value is stored in `computerResult`.
+
+3. **Calling the Function:**
+   - You call the function: `hasPlayerWonTheRound(userOption, computerResult)`.
+   - In this case, it’s the same as calling: `hasPlayerWonTheRound("Rock", "Scissors")`.
+
+4. **Function Execution:**
+   ```javascript
+   function hasPlayerWonTheRound(player, computer) {
+     return (
+       (player === "Rock" && computer === "Scissors") ||
+       (player === "Scissors" && computer === "Paper") ||
+       (player === "Paper" && computer === "Rock")
+     );
+   }
+   ```
+   - The function receives `player = "Rock"` and `computer = "Scissors"`.
+   - It checks three conditions to determine if the player wins:
+     1. `player === "Rock" && computer === "Scissors"` (true in this case, because "Rock" beats "Scissors").
+     2. `player === "Scissors" && computer === "Paper"` (not checked because the first condition is true).
+     3. `player === "Paper" && computer === "Rock"` (not checked because the first condition is true).
+
+5. **Returning the Result:**
+   - Since the first condition is true, the function returns `true`, indicating that the player wins this round.
+
+### How the Result is Used in `getRoundResults`
+
+1. **Calling `getRoundResults`:**
+   ```javascript
+   function getRoundResults(userOption) {
+     const computerResult = getRandomComputerResult();
+     if (hasPlayerWonTheRound(userOption, computerResult)) {
+       playerScore++;
+       return `Player wins! ${userOption} beats ${computerResult}`;
+     } else if (computerResult === userOption) {
+       return `It's a tie! Both chose ${userOption}`;
+     } else {
+       computerScore++;
+       return `Computer wins! ${computerResult} beats ${userOption}`;
+     }
+   }
+   ```
+   
+2. **Function Execution:**
+   - The `getRoundResults` function calls `getRandomComputerResult()` to get a random move for the computer and stores it in `computerResult`.
+   - Then it calls `hasPlayerWonTheRound(userOption, computerResult)` to check if the player wins.
+
+3. **Handling the Result:**
+   - If `hasPlayerWonTheRound` returns `true`, it increments `playerScore` and returns a message saying the player wins.
+   - If the player and computer chose the same move, it returns a message saying it's a tie.
+   - If neither condition is true, it means the computer wins, so it increments `computerScore` and returns a message saying the computer wins.
+
+I hope this explanation makes it clearer! If you have any more questions or need further assistance, feel free to ask. Happy coding!

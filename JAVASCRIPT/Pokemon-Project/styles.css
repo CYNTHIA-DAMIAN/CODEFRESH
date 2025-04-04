@@ -1,0 +1,21 @@
+body {
+    background-color: aqua;
+    text-align: center;
+}
+ 
+.bottom-container, .top-container {
+    margin-left: 35%;
+    margin-top: 2%;
+    background-color: bisque;
+    width: 40%;
+}
+
+input, button {
+    border-radius: 5px;
+}
+
+input {
+    width: 25%;
+     background-color: beige;
+}
+

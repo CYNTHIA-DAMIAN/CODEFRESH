@@ -1,0 +1,337 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  *,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+ 
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+h1,
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  text-align: center;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+#header-wrap {
+    position: relative;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+  color: blue;
+  text-decoration: none;
+}
+#header {
+    position: fixed;
+    top: 0;
+    min-height: 75px;
+    padding: 0px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+@media (max-width: 600px) {
+    header {
+      flex-wrap: wrap;
+    }
+  }
+
+  .logo {
+    width: 60vw;
+  }
+
+  @media (max-width: 650px) {
+    .logo {
+      margin-top: 15px;
+      width: 100%;
+      position: relative;
+    }
+  }
+
+  .logo > img {
+    width: 10%;
+    height: 10%;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: 20px;
+  }
+
+  @media (max-width: 650px) {
+    .logo > img {
+      margin: 0 auto;
+    }
+  }
+  
+  nav {
+    font-weight: 600;
+  }
+  
+  @media (max-width: 650px) {
+    nav {
+      margin-top: 10px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 50px;
+    }
+    nav li {
+      padding-bottom: 5px;
+    }
+  }
+  
+  nav > ul {
+    font-size: large;
+    width: 35vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: end;
+  }
+
+  nav > ul > li:hover { 
+    background-color: turquoise;
+    transition: background-color 0.5s ease-in-out;
+    }
+
+    #welcome-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 75vh;
+        text-align: center;
+        background-color: #000;
+        color: #fff;
+        font-weight: 600;
+        font-size: 3rem;
+    }
+    
+    .projects-section {
+      text-align: center;
+      padding: 10rem 2rem;
+      background-color: turquoise
+    }
+    
+    .projects-section-header {
+      max-width: 640px;
+      margin: 0 auto 6rem auto;
+      border-bottom: 0.9rem solid royalblue;
+      border-radius: 21rem;
+    }
+
+    @media (max-width: 28.75em) {
+      .projects-section-header {
+        font-size: 4rem;
+      }
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-gap: 4rem;
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      margin-bottom: 6rem;
+    }
+
+    @media (max-width: 30.625em) {
+      .projects-section {
+        padding: 6rem 1rem;
+      }
+    
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .project {
+      background: #000;
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+    }
+    
+    .design {
+      color: black;
+      
+      transition: color 0.3s ease-out;
+    }
+    
+    .project:hover .design {
+      color: #ff7f50;
+    }
+    
+    .project-image {
+      height: calc(100% - 6.8rem);
+      width: 100%;
+      object-fit: cover;
+    }
+    
+    .project-title {
+      font-size: 2rem;
+      padding: 2rem 0.5rem;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      border-radius: 2px;
+    }
+    
+    .btn-show-all {
+      font-size: 2rem;
+      background: #ff7f50;
+      transition: background 0.3s ease-out;
+    }
+    
+    .btn-show-all:hover {
+      background: lightcyan;
+    }
+    
+    .btn-show-all:hover > i {
+      transform: translateX(2px);
+    }
+    
+    .btn-show-all > i {
+      margin-left: 10px;
+      transform: translateX(0);
+      transition: transform 0.3s ease-out;
+    }
+    
+
+    .contact-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      height: 80vh;
+      padding: 0 2rem;
+      background: var(--main-gray);
+    }
+    
+    .contact-section-header > h2 {
+      font-size: 6rem;
+    }
+    
+    @media (max-width: 28.75em) {
+      .contact-section-header > h2 {
+        font-size: 4rem;
+      }
+    }
+    
+    .contact-section-header > p {
+      font-style: italic;
+      font-size: medium;
+    }
+    
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      max-width: 980px;
+      margin-top: 4rem;
+      flex-wrap: wrap;
+    }
+    
+    .contact-details {
+      font-size: 2.4rem;
+      text-shadow: 2px 2px 1px #1f1f1f;
+      transition: transform 0.3s ease-out;
+    }
+    
+    .contact-details:hover {
+      transform: translateY(8px);
+    }
+    
+    footer {
+      font-weight: 300;
+      display: flex;
+      justify-content: space-evenly;
+      padding: 2rem;
+      background: var(--main-gray);
+      border-top: 4px solid var(--main-red);
+    }
+    
+    footer > p {
+      margin: 2rem;
+      font-size: medium;
+    }
+    
+    footer i {
+      vertical-align: middle;
+    }
+    
+    @media (max-width: 28.75em) {
+      footer {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+    
+
+    @media (max-width: 75em) {
+      html {
+        font-size: 60%;
+      }
+    }
+    
+    /* 980px / 16px = 61.25em */
+    @media (max-width: 61.25em) {
+      html {
+        font-size: 58%;
+      }
+    }
+    
+    /* 460px / 16px = 28.75em */
+    @media (max-width: 28.75em) {
+      html {
+        font-size: 55%;
+      }
+    }

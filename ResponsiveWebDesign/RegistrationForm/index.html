@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <h1 id="title">
+      Your Insights Matter: Share Your Thoughts with Us
+    </h1>
+<p id="description">
+  We Value Your Feedback: Help Us Improve!</p>
+
+  <form id="survey-form">
+      <fieldset>
+      <label id="name-label">Enter Your Name: <input id="name" name="name" type="text" placeholder="Full Name" required/></label> <br/><br/>
+      <label id="email-label">Enter Your Email:<input id="email" name="email" type="email" placeholder="Email Address" required/></label><br/><br/>
+    <label id="number-label">Enter Your Phone Number: 
+      <input id="number" name="number" type="number"  pattern="\+[0-9]{1,3}[0-9]{10}" min="10" max="16" placeholder="Phone Number" required/>
+      </label> 
+      </fieldset>
+      <br/><br/>
+        <label for="referrer">How did you hear about us?
+          <select id="dropdown" name="referrer">
+            <option value="">(select one)</option>
+            <option value="1">freeCodeCamp News</option>
+            <option value="2">freeCodeCamp YouTube Channel</option>
+            <option value="3">freeCodeCamp Forum</option>
+            <option value="4">Other</option>
+          </select>
+        </label> <br/>
+        <legend>Are you satisfied with the quality and speed of our service?</legend>
+        <label for="positive-input"><input id="positive-input" type="radio" name="review-type" value="review-type" class="inline" /> Awesome</label>
+        <label for="negative-input"><input id="negative-input" type="radio" name="review-type" value="review-type" class="inline" /> Horrible</label><br/><br/>
+       <fieldset>
+  <legend>Select Your Interests:</legend>
+  <label for="interest1">
+    <input type="checkbox" id="interest1" name="interests" value="coding"> Coding
+  </label>
+  <label for="interest2">
+    <input type="checkbox" id="interest2" name="interests" value="design"> Design
+  </label>
+  <label for="interest3">
+    <input type="checkbox" id="interest3" name="interests" value="marketing"> Marketing
+  </label>
+</fieldset><br/>
+        <label for="bio">Additional Feedback:
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="Feel free to elaborate... FCC can better if..."></textarea>
+        </label><br/><br/>
+      <input type="submit" id="submit" value="Submit" />
+  </form>
+</body>
+</html>

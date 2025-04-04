@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav id="navbar">
+            <header>Documentation Navigation</header>
+            <a class="nav-link" href="#C#_Roadmap">Roadmap for JavaScript and TypeScript developers learning C#</a>
+            <a class="nav-link" href="#Introduction_to_C#">Introduction to C#</a>
+            <a class="nav-link" href="#Hello_World!">Hello World!</a>
+            <a class="nav-link" href="#Arrays">Arrays</a>
+            <a class="nav-link" href="#C#_Classes">Classes</a>
+            <a class="nav-link" href="#Conditionals">Conditionals</a>
+            <a class="nav-link" href="#Data_Types">Data Types</a>
+            <a class="nav-link" href="#Deque">Deque</a>
+            <a class="nav-link" href="#Enums">Enums</a>
+            <a class="nav-link" href="#Inheritance">Inheritance</a>
+            <a class="nav-link" href="#Interfaces">Interfaces</a>
+            <a class="nav-link" href="#Loops">Loops</a>
+            <a class="nav-link" href="#Math_Functions">Math Functions</a>
+            <a class="nav-link" href="#Methods">Methods</a>
+            <a class="nav-link" href="#Reference">Reference</a>
+        </nav>
+
+        <main id="main-doc">
+            <section class="main-section" id="C#_Roadmap">
+                <header>
+                    Roadmap for JavaScript and TypeScript developers learning C#
+                </header>
+                <article>
+                    <p>
+                        This roadmap is designed to provide a general overview of the key features and concepts of C# that are important to JavaScript and TypeScript developers. It is intended to be a living document that will be updated as new features and concepts are added to C#.
+                    </p>
+                    <p>
+                        C#, TypeScript and JavaScript are all members of the C family of languages. The similarities between the languages help you quickly become productive in C#. Here are some key features and concepts that are important to JavaScript and TypeScript developers learning C#:
+                    </p>
+                    <ul>
+                        <li>
+                            Similar syntax: JavaScript, TypeScript, and C# are in the C family of languages. That similarity means you can already read and understand C#. There are some differences, but most of the syntax is the same as JavaScript, and C. The curly braces and semicolons are familiar. The control statements like if, else, switch are the same. The looping statements of for, while, and do...while are same. The same keywords for class and interface are in both C# and TypeScript. The access modifiers in TypeScript and C#, from public to private, are the same.
+                        </li>
+                        <li>
+                            The => token: All languages support lightweight function definitions. In C#, they're referred to as lambda expressions, in JavaScript, they're typically called arrow functions. Function hierarchies: All three languages support local functions, which are functions defined in other functions.
+                            Async / Await: All three languages share the same async and await keywords for asynchronous programming.
+                        </li>
+                    </ul>
+                </article>
+            </section>
+            <section class="main-section" id="Introduction_to_C#">
+                <header>Introduction to C#</header>
+                <p>
+                    Welcome to the introduction to C# tutorials. These lessons start with interactive code that you can run in your browser. You can learn the basics of C# from the C# for Beginners video series before starting these interactive lessons.
+                </p>
+                <p>
+                    You can try these tutorials in different environments. The concepts you'll learn are the same. The difference is which experience you prefer:
+                </p>
+                <li>
+                    In your browser, on the docs platform: This experience embeds a runnable C# code window in docs pages. You write and execute C# code in the browser.
+                </li>
+                <li>
+                    In the Microsoft Learn training experience. This learning path contains several modules that teach the basics of C#.
+                </li>
+                <li>
+                    In Jupyter on Binder. You can experiment with C# code in a Jupyter notebook on binder.
+                </li>
+            </section>
+            <section class="main-section" id="Hello_World!">
+                <header>Hello World!</header>
+                <article>
+                    <p>
+                        Run the following code in the interactive window. Select the Enter focus mode button. Then, type the following code block in the interactive window and select Run:
+                    </p>
+                    <code>
+                        Console.WriteLine("Hello, World!");
+                    </code>
+                    <p>
+                        Congratulations! You've run your first C# program. It's a simple program that prints the message <pre>"Hello World!".</pre> 
+                    </p>
+                </article>
+            </section>
+            <section class="main-section" id="Arrays">
+                <header>Arrays</header>
+                <article>
+                    <p>
+                        An array is a data structure used in C# to store a sequential collection of elements.
+                    </p>
+                    <p>
+                        Its size is immutable (cannot be changed after creation).
+                    </p>
+                    <p>
+                        The elements of an array are all of the same type, but it is possible to define a C# array that can hold elements of any type by specifying the type of the array as an object. In C#, all types directly or indirectly inherit from Object.
+                    </p>
+                </article>
+            </section>
+            <section class="main-section" id="C#_Classes">
+                <header>Classes</header>
+                <article>
+                    <p>
+                        In C#, a class serves as a blueprint or template for creating objects. It plays a fundamental role in defining the structure, behavior, and attributes of these objects. A class can be thought of as a user-defined data type that encapsulates both data (attributes) and the actions (methods) that are applied to that data.
+                    </p>
+                    <h4>Syntax for Declaring Classes</h4>
+                    <p>
+                        To declare a class in C#, use the class keyword, followed by the class name. Class names should follow C# naming conventions (typically using PascalCase). The class definition is enclosed within curly braces {}
+                    </p>
+                    <code>
+                        public class MyClass {
+                            // Fields, properties, and methods go here
+                        }
+                    </code>
+                    <p>
+                        C# provides access modifiers to control the visibility and accessibility of class members. Example: 
+                    </p>
+                    <code>
+                        using System;
+                        public class Program {
+                            public static void Main() {
+                                // Create a BankAccount instance with an initial balance of $1000.
+                                BankAccount account = new BankAccount(1000);
+            
+                                // Use the GetBalance method to get the current balance.
+                                double currentBalance = account.GetBalance();
+                                Console.WriteLine("Current Balance: $" + currentBalance);
+            
+                                // Attempt to call the private method PerformAudit (won't compile).
+                                // This will result in a compilation error because private methods cannot be accessed from outside the class.
+                                // account.PerformAudit();
+                            }
+                        }
+                    </code>
+                </article>
+            </section>
+            <section class="main-section" id="Conditionals">
+                <header>Conditionals</header>
+                <article>
+                    <p>
+                        In C#, conditionals compare inputs and return a boolean value indicating whether it evaluates to true or false.
+                        Conditional statements include the if, else and else if statements. A shorthand for the if/else statement is the conditional or ternary operator. <h4>If Statement:</h4>
+                    </p>
+                    <code>
+                        var input1 = 10;
+                        var input2 = 10;
+                        var output = false;
+            
+                        if (input1 == input2) {
+                            output = true; // Sets the output from false to true.
+                        }
+                    </code>
+                    <p>
+                        <h4>Else Statements</h4>
+                        An else statement is combined with the if statement. In the case that the condition following the if statement returns false, the code block following the else statement will run.
+                        In the example below, three variables are assigned values:
+                    </p>
+                    <code>
+                        var input1 = 10;
+                        var input2 = 10;
+                        var output = false;
+            
+                        // If the input variables are not equal, the output will be set to true.
+                        if (input1 != input2) {
+                            output = true;
+                        } else {
+                            output = false;
+                        }
+                    </code>
+                    <p>
+                        <h4>Else If Statements</h4>
+                        An else if statement comes after an if statement and is used if an extra comparison is needed before an else statement.
+                    </p>
+                    <code>
+                        // Four variables are declared here.
+                        var input1 = 10;
+                        var input2 = 10;
+                        var input3 = 5;
+                        var output = false;
+            
+                        // If input1 is equal to input3 then set the variable of output to true.
+                        if (input1 == input3) {
+                            output = true;
+                        // If input1 is equal to input2, then set the variable of output to true as well.
+                        } else if (input1 == input2) {
+                            output = true;
+                        // If the two conditions above are false, the else code block will run.
+                        } else {
+                            output = false;
+                        }
+                    </code>
+                </article>
+            </section>
+            <section class="main-section" id="Data_Types">
+                <header>Data Types</header>
+                <article>
+                    <p>
+                        C-sharp supports many data types that represent the size and kind of values stored in memory. The two main data types in C# are value and reference types.
+                    </p>
+                    <p>
+                        Value types are data types that are built-in to C#. The available types and their memory sizes are as follows:
+                    </p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Data Type</th>
+                                <th>Description</th>
+                                <th>Memory Size</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>bool</td>
+                                <td>Boolean</td>
+                                <td>1 byte</td>
+                            </tr>
+                            <tr>
+                                <td>float</td>
+                                <td>Float</td>
+                                <td>4 bytes</td>
+                            </tr>
+                            <!-- Add more rows as needed -->
+                        </tbody>
+                    </table>
+                </article>
+            </section>
+            <section class="main-section" id="Deque">
+                <header>Deque</header>
+                <article>
+                    <p>
+                        Deque (Double-Ended Queue) is a type of data structure that allows insertion and removal of elements from both the front and rear. In C#, it can be implemented using LinkedList<T> and List<T>.
+                    </p>
+                    <code>
+                        LinkedList<T> deque = new LinkedList<T>();
+                    </code>
+                    <p>
+                        <h4>Creating a Deque using List Class</h4>
+                        To create a deque in C#, use List<T>, where T defines the type of elements stored.
+                    </p>
+                    <code>
+                        List<T> deque = new List<T>();
+                    </code>
+                    <p>
+                        Codebyte Example
+                        Use this example to experiment with implementing a Deque using LinkedList. Enjoy coding!
+                    </p>
+                </article>
+            </section>
+            <section class="main-section" id="Enums">
+                <header>Enums</header>
+                <p>
+                    An enum, or enumeration type, is a set of named labels that each represent a number.
+                </p>
+                <ul>
+                    <li>
+                        <b>Syntax:</b>
+                        By default, each entry in an enum is assigned a zero-indexed value.
+                    </li>
+                    <li>
+                        To create an enum, use the enum keyword (instead of class or interface), and separate the enum items with a comma:
+                    </li>
+                </ul>
+                <code>
+                    enum Level 
+                    {
+                        Low,
+                        Medium,
+                        High
+                    }
+                </code>
+                <ul>
+                    <li>
+                        Enum is short for "enumerations", which means "specifically listed".
+                    </li>
+                </ul>
+            </section>
+            <section class="main-section" id="Inheritance">
+                <header>Inheritance</header>
+                <article>
+                    <p>
+                        <b>Inheritance</b> in object-oriented programming (OOP) is the concept of creating new classes based on existing classes. In C#, there are parent classes and child classes.
+                    </p>
+                    <code>
+                        public class Phone
+                        {
+                            public string Brand { get; set; }
+                            public string Model { get; set; }
+                
+                            public void Call(string phoneNumber)
+                            {
+                                Console.WriteLine($"Calling {phoneNumber}...");
+                            }
+                        }
+                    </code>
+                    <p>
+                        Child classes, similar to real-life relationships, can inherit properties, methods, and behaviors from their parent class by default and can also introduce their own unique characteristics.
+                    </p>
+                    <code>
+                        public class SmartPhone : Phone
+                        {
+                            public void BrowseInternet()
+                            {
+                                Console.WriteLine("Browsing the internet...");
+                            }
+                            public void SendMessage(string phoneNumber, string message)
+                            {
+                                Console.WriteLine($"Sending message to {phoneNumber}: {message}");
+                            }
+                        }
+                    </code>
+                    <p>
+                        In summary, a child class in C# inherits the attributes and functionalities of its parent class, while also having the flexibility to define its specific characteristics. A child class can modify or override the characteristics of its parent class, providing a new implementation for methods already defined in the parent class. This process is known as polymorphism, another fundamental concept in OOP.
+                    </p>
+                    <code>
+                        public class LandLinePhone : Phone
+                        {
+                            // LandLine phones don't have internet browsing functionality or message functionality
+                        }
+                    </code>
+                    <p>
+                        The : symbol is used in C# within the declaration of the child class to specify the parent or origin class.
+                    </p>
+                    <code>
+                        //Single Inheritance Example
+                        public class Vehicle {
+                            // Vehicle class properties and methods
+                        }
+                        
+                        public class Car : Vehicle {
+                            // Vehicle class properties and methods accessible here due to inheritance
+                            // Car class properties and methods
+                        }
+                    </code>
+                </article>
+            </section>
+            <section class="main-section" id="Interfaces">
+                <header>Interfaces</header>
+                <article>
+                    <p>
+                        An interface in C# is a contract that defines a set of methods, properties, events, and indexers that a class or struct must implement. Interfaces cannot be instantiated directly, but they can be implemented by classes and structs. They are one of several tools for implementing object-oriented design in C#.
+                    </p>
+                    <p>
+                        <h4>Syntax</h4>
+                        An interface in C# is created using the interface keyword. The syntax for defining an interface in C# is:
+                    </p>
+                    <code>
+                        interface MyInterface
+                        {
+                            void MyMethod();
+                            string MyProperty { get; set; }
+                            event EventHandler MyEvent;
+                        }
+                    </code>
+                    <p>
+                        To implement an interface in C#, you use the : symbol, followed by the name of the interface. The syntax for implementing an interface is as follows:
+                    </p>
+                    <code>
+                        class MyClass : MyInterface
+                        {
+                            public void MyMethod()
+                            {
+                                // implementation of MyMethod()
+                            }
+                
+                            public string MyProperty
+                            {
+                                get { return "MyValue"; }
+                                set { }
+                            }
+                
+                            public event EventHandler MyEvent;
+                        }
+                    </code>
+                    <p>
+                        <h4>Use of Interfaces</h4>
+                        Interfaces can be used in C# to achieve a number of different goals, including:
+                    </p>
+                    <ul>
+                        <li>
+                            <b>Abstraction:</b> Interfaces can be used to abstract away the implementation details of a class or struct. This can make code more modular and easier to understand.
+                        </li>
+                        <li>
+                            <b>Multiple inheritance:</b> C# does not support multiple inheritance of classes, but it does support multiple inheritance of interfaces. This allows a class to inherit the functionality of multiple different interfaces.
+                        </li>
+                        <li>
+                            <b>Plug-and-play:</b> Interfaces can be used to create a “plug-and-play” architecture. This means that different classes or structs can be easily swapped in and out, as long as they implement the same interfaces.
+                        </li>
+                    </ul>
+                </article>
+            </section>
+            <section class="main-section" id="Loops">
+                <header>Loops</header>
+                <article>
+                    <p>
+                        A loop is a logical structure used to repeatedly execute a block of code. This repetition can either iterate an exact number of times (definite) or continuously until a condition is met (indefinite).
+                    </p>
+                    <p>
+                        <b>For Loop</b>
+                        In C# the for loop uses definite repetition to run a block of code a specified number of times and consists of three statements separated by semicolons.
+                    </p>
+                    <ul>
+                        <li>
+                            Statement 1 executes only once, before the code block runs for the first time, and is commonly used to set the initial value of a variable.
+                        </li>
+                        <li>
+                            Statement 2 is a conditional statement that must return true for the code block to execute.
+                        </li>
+                        <li>
+                            Statement 3 runs after each repetition of the loop and is typically used to alter the value of the variable set in Statement 1.
+                        </li>
+                    </ul>
+                    <code>
+                        for (int i = 5; i > 0; i--)
+                        {
+                            // Repeated code here
+                        }
+                    </code>
+                    <p>
+                        <h4>While Loop</h4>
+                        The while loop in C# executes an unspecified number of times until the given condition returns false. The condition is tested before each iteration of the loop. If the condition is false when it is tested the first time, the code block is never run.
+                    </p>
+                    <code>
+                        int i = 0;
+                        while (i > -5)
+                        {
+                            // Repeated code here
+                            i--;
+                        }
+                    </code>
+                </article>
+            </section>
+            <section class="main-section" id="Math_Functions">
+                <header>Math Functions</header>
+                <article>
+                    <p>
+                        <b>Mathematical functions</b> can be performed using the System.Math class. System.Math is a static class that is included within .NET as part of the System namespace. .NET is a free, cross-platform, open source developer platform created by Microsoft.
+                    </p>
+                    <p>
+                        <h4>Syntax</h4>
+                        The Math class can be accessed by including the System namespace within a .cs file by adding the following line:
+                    </p>
+                    <code>
+                        // Include the System namespace
+                        using System;
+                
+                        public class Example
+                        {
+                            public static void Main(string[] args)
+                            {
+                                // Raise 4 to power of 2
+                                double x = Math.Pow(4,2);
+                
+                                System.Console.WriteLine("x = {0}", x);
+                                // Output: x = 16
+                            }
+                        }
+                    </code>
+                </article>
+            </section>
+            <section class="main-section" id="Methods">
+                <header>Methods</header>
+                <article>
+                    <p>
+                        Methods are blocks of code that can be reused elsewhere in a C# application. Each application has at least one Main() method that acts as the starting point. Methods are used to avoid the repetition of code and make it maintainable and readable. Usually, a method has one or multiple dedicated purposes.
+                    </p>
+                    <p>
+                        A function inside a class is called a method. As C# is an object-oriented programming language, all functions are declared inside classes, making them methods. Thus, methods and functions are synonymous.
+                    </p>
+                    <code>
+                        // Declare a public method without return type and no parameters:
+                        public void PrintString()
+                        {
+                            Console.WriteLine("Hello, World!");
+                        }
+                
+                        // Declare a private method which returns an object and takes no parameters:
+                        private int ReturnNumber()
+                        {
+                            return 7;
+                        }
+                
+                        // Declare a public method which returns an integer and takes an input parameter:
+                        public int CalculateWithParameter(int x)
+                        {
+                            return ReturnNumber() - x;
+                        }
+                    </code>
+                    <p>
+                        Methods begin with a signature made of the following parts:
+                    </p>
+                    <ul>
+                        <li>
+                            An access level of public or private (private is the default)
+                        </li>
+                        <li>
+                            Optional modifiers (e.g., abstract and sealed)
+                        </li>
+                        <li>
+                            The method return value (string, int, object, etc.) or void
+                        </li>
+                        <li>
+                            The method name (starting with a capital letter; usually a verb)
+                        </li>
+                        <li>
+                            Zero, one, or more (optional) parameters
+                        </li>
+                    </ul>
+                </article>
+            </section>
+            <section class="main-section" id="Reference">
+                <header>Reference</header>
+                <article>
+                  <ul>
+                    <li>
+                      All the documentation in this page is taken from
+                      <a
+                        href="https://www.codecademy.com/resources/docs/c-sharp/methods"
+                        target="_blank"
+                        >codecademy</a
+                      >
+                      <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+                        target="_blank"
+                        >MDN</a
+                      >
+                      <a
+                        href="https://www.w3schools.com/"
+                        target="_blank"
+                        >w3schools</a
+                      >
+                      <a
+                        href="https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/tutorials/?source=recommendations#numbers-in-c"
+                        target="_blank"
+                        >Microsoft Learn</a>
+                    </li>
+                  </ul>
+                </article>
+              </section>
+        </main>
+    </div>    
+</body>
+</html>
+
+
+
+
+
+
+
